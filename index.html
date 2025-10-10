@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nasser | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script defer src="script.js"></script>
 </head>
 <body>
+
   <!-- ===== NAVIGATION ===== -->
   <header>
     <nav class="navbar">
@@ -36,15 +38,18 @@
   <!-- ===== ABOUT ===== -->
   <section id="about" class="about">
     <h2>About Me</h2>
-    <p>
-     I'm a passionate <strong>DevOps and Cloud Engineer</strong> who loves automating systems,
-    deploying scalable applications, and improving software delivery pipelines.  
-    I specialize in <strong>containerization (Docker)</strong>, <strong>orchestration (Kubernetes)</strong>,
-    and <strong>cloud infrastructure</strong> on platforms like <strong>Azure</strong> and <strong>AWS</strong>.
-    </p>
-
-    <!-- Resume Download -->
-    <a href="Nasser_Tarek_CV.pdf" class="btn" download>📄 Download Resume</a>
+    <div class="about-container">
+      <img src="assets/nasser.jpg" alt="Nasser Tarek Photo" class="about-img" />
+      <div class="about-text">
+        <p>
+          I'm a passionate <strong>DevOps and Cloud Engineer</strong> who loves automating systems,
+          deploying scalable applications, and improving software delivery pipelines.  
+          I specialize in <strong>containerization (Docker)</strong>, <strong>orchestration (Kubernetes)</strong>,
+          and <strong>cloud infrastructure</strong> on platforms like <strong>Azure</strong> and <strong>AWS</strong>.
+        </p>
+        <a href="assets/Nasser_Tarek_CV.pdf" class="btn" download>📄 Download Resume</a>
+      </div>
+    </div>
   </section>
 
   <!-- ===== SKILLS ===== -->
@@ -52,113 +57,110 @@
     <h2>Skills</h2>
     <div class="skills-grid">
       <div class="skill">Linux / Shell Scripting</div>
-    <div class="skill">Git & GitHub</div>
-    <div class="skill">CI/CD (Jenkins, GitHub Actions)</div>
-    <div class="skill">Docker & Containerization</div>
-    <div class="skill">Kubernetes </div>
-    <div class="skill">Terraform / Infrastructure as Code</div>
-    <div class="skill">Ansible / Configuration Management</div>
-    <div class="skill">Cloud Platforms (AWS / Azure)</div>
-    <div class="skill">Monitoring (Prometheus, Grafana)</div>
-    <div class="skill">Networking </div>
-    <div class="skill">Bash Automation</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">CI/CD (Jenkins, GitHub Actions)</div>
+      <div class="skill">Docker & Containerization</div>
+      <div class="skill">Kubernetes</div>
+      <div class="skill">Terraform / Infrastructure as Code</div>
+      <div class="skill">Ansible / Configuration Management</div>
+      <div class="skill">Cloud Platforms (AWS / Azure)</div>
+      <div class="skill">Monitoring (Prometheus, Grafana)</div>
+      <div class="skill">Networking</div>
+      <div class="skill">Bash Automation</div>
     </div>
   </section>
 
   <!-- ===== PROJECTS ===== -->
- <section id="projects" class="projects">
-  <h2>Projects</h2>
-  <div class="project-list">
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
 
-    <!-- Ansible Project -->
-    <div class="project">
-      <h3>Ansible Multi-Server Deployment</h3>
-      <p>
-        Designed and implemented complete infrastructure automation using <strong>Ansible</strong>.
-        Built reusable roles to automate <strong>Nginx</strong> setup and <strong>database configuration</strong>,
-        while securing sensitive credentials via <strong>Ansible Vault</strong>.
-        Structured the project with clear inventories, group variables, and scalable playbooks.
-      </p>
-      <p><strong>Tech Stack:</strong> Ansible, Nginx, MySQL, Linux</p>
-      <a href="https://github.com/nasser-tarek/ansible-project-deployment" target="_blank" class="btn">🔗 View on GitHub</a>
+      <div class="project">
+        <h3>Ansible Multi-Server Deployment</h3>
+        <p>
+          Designed and implemented complete infrastructure automation using <strong>Ansible</strong>.
+          Built reusable roles to automate <strong>Nginx</strong> setup and <strong>database configuration</strong>,
+          while securing sensitive credentials via <strong>Ansible Vault</strong>.
+          Structured the project with clear inventories, group variables, and scalable playbooks.
+        </p>
+        <p><strong>Tech Stack:</strong> Ansible, Nginx, MySQL, Linux</p>
+        <a href="https://github.com/nasser-tarek/ansible-project-deployment" target="_blank" class="btn">🔗 View on GitHub</a>
+      </div>
+
+      <div class="project">
+        <h3>Multi-Service Docker Application</h3>
+        <p>
+          Developed and deployed a multi-container application using <strong>Docker</strong> and <strong>Docker Compose</strong>.
+          Configured <strong>Nginx</strong> as a reverse proxy between frontend and backend services,
+          and built a <strong>Flask API</strong> integrated with <strong>PostgreSQL</strong> to track page visits.
+          Implemented isolated networks and persistent storage with Docker volumes.
+        </p>
+        <p><strong>Tech Stack:</strong> Docker, Flask, PostgreSQL, Nginx</p>
+        <a href="https://github.com/nasser-tarek/multi-service-docker-app" target="_blank" class="btn">🔗 View on GitHub</a>
+      </div>
+
     </div>
-
-    <!-- Docker Project -->
-    <div class="project">
-      <h3>Multi-Service Docker Application</h3>
-      <p>
-        Developed and deployed a multi-container application using <strong>Docker</strong> and <strong>Docker Compose</strong>.
-        Configured <strong>Nginx</strong> as a reverse proxy between frontend and backend services,
-        and built a <strong>Flask API</strong> integrated with <strong>PostgreSQL</strong> to track page visits.
-        Implemented isolated networks and persistent storage with Docker volumes.
-      </p>
-      <p><strong>Tech Stack:</strong> Docker, Flask, PostgreSQL, Nginx</p>
-      <a href="https://github.com/nasser-tarek/multi-service-docker-app" target="_blank" class="btn">🔗 View on GitHub</a>
-    </div>
-
-  </div>
-</section>
-
+  </section>
 
   <!-- ===== CERTIFICATES ===== -->
   <section id="certificates" class="certificates">
-  <h2>Certificates</h2>
-  <div class="cert-list">
+    <h2>Certificates</h2>
+    <div class="cert-list">
 
-    <div class="cert">
-      <h3>AWS Cloud Practitioner</h3>
-      <p>Amazon Web Services — <strong>Aug 2025</strong></p>
+      <div class="cert">
+        <h3>AWS Cloud Practitioner</h3>
+        <p>Amazon Web Services — <strong>Aug 2025</strong></p>
+      </div>
+
+      <div class="cert">
+        <h3>Linux Administration</h3>
+        <p>Information Technology Institute (ITI) — <strong>Mar 2025</strong></p>
+      </div>
+
+      <div class="cert">
+        <h3>Windows Server</h3>
+        <p>Information Technology Institute (ITI) — <strong>Dec 2024</strong></p>
+      </div>
+
+      <div class="cert">
+        <h3>CCNA (Routing & Switching)</h3>
+        <p>National Telecommunication Institute (NTI) — <strong>Sep 2023</strong></p>
+      </div>
+
     </div>
-
-    <div class="cert">
-      <h3>Linux Administration</h3>
-      <p>Information Technology Institute (ITI) — <strong>Mar 2025</strong></p>
-    </div>
-
-    <div class="cert">
-      <h3>Windows Server</h3>
-      <p>Information Technology Institute (ITI) — <strong>Dec 2024</strong></p>
-    </div>
-
-    <div class="cert">
-      <h3>CCNA (Routing & Switching)</h3>
-      <p>National Telecommunication Institute (NTI) — <strong>Sep 2023</strong></p>
-    </div>
-
-  </div>
-</section>
-
+  </section>
 
   <!-- ===== CONTACT ===== -->
   <section id="contact" class="contact">
-  <h2>Contact Me</h2>
-  <p>Let’s connect! I’m always open to discussing DevOps, Cloud, or Infrastructure projects.</p>
+    <h2>Contact Me</h2>
+    <p>Let’s connect! I’m always open to discussing DevOps, Cloud, or Infrastructure projects.</p>
 
-  <div class="contact-info">
-    <div class="contact-item">
-      <i class="fas fa-envelope"></i>
-      <a href="mailto:nasser.tarek.n1@gmail.com">nasser.tarek.n1@gmail.com</a>
-    </div>
+    <div class="contact-info">
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:nasser.tarek.n1@gmail.com">nasser.tarek.n1@gmail.com</a>
+      </div>
 
-    <div class="contact-item">
-      <i class="fas fa-phone-alt"></i>
-      <a href="https://wa.me/qr/MJGNAYIO7GGNO1" target="_blank">+20 101 343 9029</a>
-    </div>
+      <div class="contact-item">
+        <i class="fas fa-phone-alt"></i>
+        <a href="https://wa.me/qr/MJGNAYIO7GGNO1" target="_blank">+20 101 343 9029</a>
+      </div>
 
-    <div class="contact-item">
-      <i class="fab fa-linkedin"></i>
-      <a href="https://www.linkedin.com/in/nasser-tarek" target="_blank">LinkedIn Profile</a>
-    </div>
+      <div class="contact-item">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/nasser-tarek" target="_blank">LinkedIn Profile</a>
+      </div>
 
-    <div class="contact-item">
-      <i class="fab fa-github"></i>
-      <a href="https://github.com/nasser-tarek" target="_blank">GitHub</a>
+      <div class="contact-item">
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/nasser-tarek" target="_blank">GitHub</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <footer>
     <p>© 2025 Nasser | All Rights Reserved</p>
   </footer>
+
 </body>
 </html>

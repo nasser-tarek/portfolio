@@ -8,16 +8,14 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #0a0a0a;
+  background: linear-gradient(120deg, #0a0a0a, #111827);
   color: #eaeaea;
   line-height: 1.6;
+  padding-top: 80px; /* Navbar height */
+  transition: background 0.5s, color 0.5s;
 }
 
-/* ====== Container & Headings ====== */
-section {
-  padding: 70px 10%;
-}
-
+/* ====== Headings ====== */
 h1, h2, h3 {
   color: #00bcd4;
   text-transform: capitalize;
@@ -59,26 +57,53 @@ nav ul li a {
   color: #eaeaea;
   text-decoration: none;
   font-weight: 500;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
   color: #00bcd4;
 }
 
-/* ====== About Section ====== */
-.about {
+/* Mobile menu toggle */
+.mobile-menu-toggle {
+  display: none;
+  font-size: 2em;
+  color: #00bcd4;
+  cursor: pointer;
+}
+
+/* ====== Home Section ====== */
+.home {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  text-align: center;
+  background: url('assets/devops-bg.jpg') no-repeat center center/cover;
+}
+
+.home h1 {
+  font-size: 2.8em;
+}
+
+.home p {
+  font-size: 1.5em;
+  margin: 15px 0;
+}
+
+/* ====== About Section ====== */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
   flex-wrap: wrap;
 }
 
-.about img {
+.about-img {
   width: 260px;
   border-radius: 50%;
   border: 3px solid #00bcd4;
-  margin-bottom: 20px;
 }
 
 .about-text {
@@ -99,7 +124,8 @@ nav ul li a:hover {
   text-decoration: none;
   display: inline-block;
   margin-top: 15px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -124,7 +150,7 @@ nav ul li a:hover {
   border-radius: 12px;
   padding: 20px;
   background: #111;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .skill:hover {
@@ -150,7 +176,7 @@ nav ul li a:hover {
   border: 2px solid #00bcd4;
   border-radius: 12px;
   padding: 25px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .project:hover {
@@ -180,7 +206,7 @@ nav ul li a:hover {
   border: 2px solid #00bcd4;
   border-radius: 15px;
   padding: 20px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
   background: #111;
 }
 
@@ -233,4 +259,59 @@ footer {
   background: #111;
   color: #777;
   font-size: 0.9em;
+}
+
+/* ====== Light Theme ====== */
+body.light-theme {
+  background-color: #f5f5f5;
+  color: #111;
+}
+
+body.light-theme .btn {
+  background: #00bcd4;
+  color: #fff;
+}
+
+body.light-theme .project,
+body.light-theme .cert,
+body.light-theme .skill {
+  background: #fff;
+  color: #111;
+  border-color: #00bcd4;
+}
+
+body.light-theme nav {
+  background: #eaeaea;
+}
+
+body.light-theme nav ul li a {
+  color: #111;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    flex-direction: column;
+    gap: 15px;
+    width: 200px;
+    background: #111;
+    padding: 20px;
+    transition: right 0.3s ease;
+  }
+
+  nav ul.active {
+    right: 0;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
 }
