@@ -69,7 +69,7 @@ nav ul li a:hover {
 /* ====== About Section ====== */
 .about {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -90,12 +90,29 @@ nav ul li a:hover {
   font-size: 1.1em;
 }
 
+.btn {
+  background: #00bcd4;
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0097a7;
+  color: #fff;
+}
+
 /* ====== Skills Section ====== */
 .skills {
   text-align: center;
 }
 
-.skills-list {
+.skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 25px;
